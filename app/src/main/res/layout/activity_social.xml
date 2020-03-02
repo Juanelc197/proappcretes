@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityContacto"
-    android:background="#4CAF50"  >
+    tools:context=".SocialActivity"
+    android:background="#CDDC39" >
 
     <ImageButton
-        android:id="@+id/imgb_inicio2"
+        android:id="@+id/imgb_inicio3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"

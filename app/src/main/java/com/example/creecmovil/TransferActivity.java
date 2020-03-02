@@ -7,22 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class ActivityContacto extends AppCompatActivity {
+public class TransferActivity extends AppCompatActivity {
 
     ImageButton imgb_menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacto);
+        setContentView(R.layout.activity_transfer);
 
-        imgb_menu = (ImageButton) findViewById(R.id.imgb_inicio2);
+        imgb_menu = (ImageButton) findViewById(R.id.imgb_inicio4);
 
         imgb_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(ActivityContacto.this, MenuActivity.class));
+                startActivity(new Intent(TransferActivity.this, MenuActivity.class));
 
             }
         });

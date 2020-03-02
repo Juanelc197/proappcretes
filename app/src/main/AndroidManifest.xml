@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ActivityContacto"></activity>
+        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".TransferActivity" />
+        <activity android:name=".SocialActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".ActivityContacto" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
