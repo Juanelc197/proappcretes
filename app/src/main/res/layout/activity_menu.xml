@@ -7,44 +7,83 @@
     tools:context=".MenuActivity"
     android:background="#F7FAF9" >
 
+    <!-- img btn social
     <ImageButton
         android:id="@+id/imgb_social"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="140dp"
         android:backgroundTint="#CDDC39"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/telefono" />
 
+        -->
+
+    <!-- img btn contacto
     <ImageButton
         android:id="@+id/imgb_contacto"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="268dp"
         android:background="#4CAF50"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgb_social"
-        app:srcCompat="@drawable/contacto" />
+        app:srcCompat="@drawable/contacto" /> -->
 
+    <!-- img btn transfer
     <ImageButton
         android:id="@+id/imgb_transfer"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="#00BCD4"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@+id/imgb_contacto"
-        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgb_social"
-        app:srcCompat="@drawable/transferir" />
+        app:srcCompat="@drawable/transferir" /> -->
+
+    <Button
+        android:id="@+id/btn_contacto"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="#21A642"
+        android:drawableLeft="@drawable/contacto_mini_dos"
+        android:text="Contacto"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_transf" />
+
+    <Button
+        android:id="@+id/btn_transf"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="#21A642"
+        android:drawableRight="@drawable/transfer_mini_dos"
+        android:text="Transferencia"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_social" />
 
     <ImageButton
         android:id="@+id/imgb_inicio"
@@ -58,4 +97,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/inicio" />
+
+    <Button
+        android:id="@+id/btn_social"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:background="#21A642"
+        android:drawableLeft="@drawable/social_mini"
+        android:text="Social"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgb_inicio" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
