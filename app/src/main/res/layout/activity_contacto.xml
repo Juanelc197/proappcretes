@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityContacto"
-    android:background="#4CAF50"  >
+    android:background="#F7FAF9"  >
 
     <ImageButton
         android:id="@+id/imgb_inicio2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:background="#2196F3"
+        android:background="@drawable/boton_regresarr"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/inicio" />
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 </androidx.constraintlayout.widget.ConstraintLayout>

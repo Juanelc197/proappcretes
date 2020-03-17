@@ -90,13 +90,13 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:background="#2196F3"
+        android:background="@drawable/button_inicio_re"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/inicio" />
+        app:srcCompat="@drawable/manu_trans" />
 
     <Button
         android:id="@+id/btn_social"
