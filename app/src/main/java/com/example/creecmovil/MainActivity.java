@@ -17,6 +17,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.StringReader;
 import java.net.URL;
 import java.time.Instant;
@@ -33,51 +36,65 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       /* txtemail = (EditText) findViewById(R.id.txt_email);
-        txtpass = (EditText) findViewById(R.id.txt_pass);  */
+        txtemail = (EditText) findViewById(R.id.txt_email);
+        txtpass = (EditText) findViewById(R.id.txt_pass);
 
         btn = (Button) findViewById(R.id.btn_prueba);
 
-       btn.setOnClickListener(new View.OnClickListener() {
+      /* btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, UserActivity.class));
 
             }
-        });
+        }); */
 
-       /* private void validarUsuario(String URL) {
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    if(!response.isEmpty()) {
-                        Intent intent = new Intent(getApplicationContext(), UserActivity.class);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText( MainActivity.this, "email o contraseña, incorrectos",Toast.LENGTH_SHORT).show();
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final String email_cli = txtemail.getText().toString();
+                final String pass_cli = txtpass.getText().toString();
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+                            if(success) {
+                                String nombres_cli = jsonResponse.getString("nombres_cli");
+                                //int age = jsonResponse.getInt("age");
+                                int id_cli = jsonResponse.getInt("id_cli");
+
+                                Intent intent = new Intent(MainActivity.this, UserActivity.class);
+                                intent.putExtra("id_cli", id_cli);
+                                intent.putExtra("nombres_cli", nombres_cli);
+                                intent.putExtra("email_cli", email_cli);
+                                //intent.putExtra("age", age);
+                                intent.putExtra("pass_cli", pass_cli);
+
+                                MainActivity.this.startActivity(intent);
+
+                            }else {
+                                /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                builder.setMessage("error logiun")
+                                        .setNegativeButton("Retry", null)
+                                        .create().show(); */
+                                Toast.makeText(MainActivity.this, "campos vacios no", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
+                };
 
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }){
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> parametro = new HashMap<String, String>();
-                    parametro.put("email",txtemail.getText().toString());
-                    parametro.put("pass",txtpass.getText().toString());
-                    return super.getParams();
-                }
-            };
-
-            RequestQueue requestQueue= Volley.newRequestQueue(this);
-            requestQueue.add(stringRequest);
-        } */
-
+                LoginRequest loginRequest = new LoginRequest(email_cli, pass_cli,responseListener);
+                RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
+                queue.add(loginRequest);
+            }
+        });
     }
 
 }
