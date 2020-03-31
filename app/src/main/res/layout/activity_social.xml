@@ -5,7 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SocialActivity"
-    android:background="#CDDC39" >
+    android:background="#F7FAF9" >
+
+    <ImageButton
+        android:id="@+id/imgb_webcrec"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="181dp"
+        android:background="@drawable/button_rounded_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgb_link"
+        app:srcCompat="@drawable/webcree_otro" />
+
+    <ImageButton
+        android:id="@+id/imgb_twit"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/button_rounded_reds"
+        app:layout_constraintBottom_toTopOf="@+id/imgb_link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgb_face"
+        app:srcCompat="@drawable/twit_otro" />
+
+    <ImageButton
+        android:id="@+id/imgb_link"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/button_rounded_reds"
+        app:layout_constraintBottom_toTopOf="@+id/imgb_webcrec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgb_twit"
+        app:srcCompat="@drawable/link_otro" />
 
     <ImageButton
         android:id="@+id/imgb_inicio3"
@@ -19,4 +65,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <ImageButton
+        android:id="@+id/imgb_face"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="520dp"
+        android:background="@drawable/button_rounded_reds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/face_otro" />
 </androidx.constraintlayout.widget.ConstraintLayout>

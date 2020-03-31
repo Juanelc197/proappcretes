@@ -12,7 +12,7 @@ public class MenuActivity extends AppCompatActivity {
 
     ImageButton imgbuser, imgbsocial, imgbcontacto, imgbtransfer;
 
-    Button btnsocial, btntransf, btncont;
+    Button btnsocial, btntransf, btncont, btnclouse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +105,23 @@ public class MenuActivity extends AppCompatActivity {
 
                 startActivity(new Intent(MenuActivity.this, TransferActivity.class));
 
+            }
+        });
+
+        btnclouse = (Button) findViewById(R.id.btn_cerrarapp);
+
+        btnclouse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //finish();
+
+                //finish();
+                //System.exit(0);
+
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
     }

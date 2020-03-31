@@ -1,5 +1,8 @@
 package com.example.creecmovil;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -20,5 +23,9 @@ public class LoginRequest extends StringRequest {
     }
     @Override
     public Map<String, String> getParams() {return params; }
+
+   /* private void guardarPreferencias() {
+        SharedPreferences preferences = getSharedPreferences ("preferenciasLogin", Context.MODE_PRIVATE);
+    } */
 
 }

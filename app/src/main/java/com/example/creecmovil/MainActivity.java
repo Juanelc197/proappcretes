@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
                                 intent.putExtra("pass_cli", pass_cli);
 
                                 MainActivity.this.startActivity(intent);
-
+                                finish();
                             }else {
                                 /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                                 builder.setMessage("error logiun")
                                         .setNegativeButton("Retry", null)
                                         .create().show(); */
-                                Toast.makeText(MainActivity.this, "campos vacios no", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Usuario y contraseña incorrecta o campos vacíos", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

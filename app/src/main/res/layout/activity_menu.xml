@@ -52,6 +52,23 @@
         app:srcCompat="@drawable/transferir" /> -->
 
     <Button
+        android:id="@+id/btn_cerrarapp"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="240dp"
+        android:background="#F44336"
+        android:drawableRight="@android:drawable/ic_menu_close_clear_cancel"
+        android:text="Cerrar"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_transf" />
+
+    <Button
         android:id="@+id/btn_contacto"
         android:layout_width="360dp"
         android:layout_height="60dp"

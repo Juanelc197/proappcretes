@@ -7,6 +7,26 @@
     tools:context=".ActivityContacto"
     android:background="#F7FAF9"  >
 
+    <EditText
+        android:id="@+id/txt_tel_55"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="8111071055"
+        android:focusable="false"
+        android:textAlignment="center"
+        android:textColor="#025373"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_tel" />
+
     <ImageButton
         android:id="@+id/imgb_inicio2"
         android:layout_width="50dp"
@@ -19,4 +39,85 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <ImageView
+        android:id="@+id/img_tel"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="173dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/sym_action_call" />
+
+    <EditText
+        android:id="@+id/txt_tel_45"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="8111071045"
+        android:focusable="false"
+        android:textAlignment="center"
+        android:textColor="#025373"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_tel" />
+
+    <ImageView
+        android:id="@+id/img_correo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_em_aten"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tel_55"
+        app:srcCompat="@android:drawable/sym_action_email" />
+
+    <EditText
+        android:id="@+id/txt_em_aten"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:focusable="false"
+        android:text="atencionaclientes@cree-c.com	"
+        android:textAlignment="center"
+        android:textColor="#025373"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_correo" />
+
+    <ImageButton
+        android:id="@+id/con_imgb"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/button_rounded_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_em_aten"
+        app:srcCompat="@drawable/contacto_mini" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
