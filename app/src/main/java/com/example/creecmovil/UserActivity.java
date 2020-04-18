@@ -52,6 +52,9 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buscarproducto("https://c17ru5pr0y.000webhostapp.com/appcreec/bus/buscar_pro.php?cli_id="+idtxt.getText()+"");
+
+                //buscarproducto("http://192.168.100.2/appcreec/bus/buscar_pro.php?cli_id="+idtxt.getText()+"");
+
             }
         });
 

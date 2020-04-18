@@ -7,16 +7,288 @@
     tools:context=".TransferActivity"
     android:background="#F7FAF9">
 
+    <TextView
+        android:id="@+id/tv_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Transferencia entre CreeC"
+        android:textColor="#D32F2F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_correo" />
+
+    <Button
+        android:id="@+id/btn_aceptrans"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_rounded"
+        android:drawableRight="@android:drawable/ic_menu_send"
+        android:text="Aceptar"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgb_upd2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_rounded_border"
+        android:scaleType="center"
+        android:tint="#21A642"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mi_num_tar4"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageButton
+        android:id="@+id/imgBus2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="132dp"
+        android:background="@drawable/boton_buscar_dos"
+        android:tint="#F7FAF9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <TextView
+        android:id="@+id/tv_mi_saldo4"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="saldo"
+        android:textAlignment="center"
+        android:textColor="#21A642"
+        android:textColorHint="#025373"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mi_num_tar4" />
+
+    <EditText
+        android:id="@+id/txt_bus4"
+        android:layout_width="177dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#025373"
+        android:ems="10"
+        android:hint="code"
+        android:inputType="number"
+        android:textColor="#21A642"
+        android:textColorHint="#025373"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <EditText
+        android:id="@+id/txt_resaldo4"
+        android:layout_width="120dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#025373"
+        android:ems="10"
+        android:hint="saldo a trasnfe"
+        android:inputType="number"
+        android:textColor="#21A642"
+        android:textColorHint="#025373"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mi_saldo4" />
+
+    <TextView
+        android:id="@+id/tv_mi_num_tar4"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="# tarjeta"
+        android:textAlignment="center"
+        android:textColor="#21A642"
+        android:textColorHint="#025373"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBus2" />
+
+    <TextView
+        android:id="@+id/tv_restar_sal4"
+        android:layout_width="62dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="resultado"
+        android:textColor="#F44336"
+        android:textColorHint="#025373"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resaldo4" />
+
+    <TextView
+        android:id="@+id/tv_restar_sal"
+        android:layout_width="62dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="resultado"
+        android:textColor="#F44336"
+        android:textColorHint="#025373"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resaldo" />
+
+    <EditText
+        android:id="@+id/txt_resaldo"
+        android:layout_width="354dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#21A642"
+        android:ems="10"
+        android:hint="saldo a trasnfe"
+        android:inputType="number"
+        android:textColor="#025373"
+        android:textColorHint="#21A642"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mi_saldo" />
+
+    <TextView
+        android:id="@+id/tv_mi_saldo"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="saldo"
+        android:textAlignment="center"
+        android:textColor="#025373"
+        android:textColorHint="#21A642"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_resaldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mi_num_tar" />
+
     <ImageButton
         android:id="@+id/imgb_inicio4"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/boton_regresarr"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <EditText
+        android:id="@+id/txt_buscar"
+        android:layout_width="177dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#21A642"
+        android:ems="10"
+        android:hint="code"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textColor="#025373"
+        android:textColorHint="#21A642"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imgBus1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mi_num_tar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="# tarjeta"
+        android:textAlignment="center"
+        android:textColor="#025373"
+        android:textColorHint="#21A642"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_mi_saldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgb_inicio4" />
+
+    <ImageButton
+        android:id="@+id/imgBus1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/boton_buscar"
+        android:tint="#F7FAF9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <ImageButton
+        android:id="@+id/imgb_upd1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_rounded_border"
+        android:scaleType="center"
+        android:tint="#21A642"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resaldo"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="410dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgb_upd1" />
+
+    <TextView
+        android:id="@+id/tv_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="DATE"
+        android:textColor="#D32F2F"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restar_sal4" />
+
+    <TextView
+        android:id="@+id/tv_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="limon.carrizales.juan.tp@gmail.com "
+        android:textColor="#D32F2F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fecha" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
